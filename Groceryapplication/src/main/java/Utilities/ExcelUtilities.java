@@ -26,7 +26,7 @@ public static String getStringData(int a,int b,String sheet) throws IOException
 }
 
 
-public static int getIntegerData(int a,int b,String sheet) throws IOException 
+public static String getIntegerData(int a,int b,String sheet) throws IOException 
 {
 	String filepath=Constant.TESTDATAFILE;
 	f=new FileInputStream(filepath);
@@ -35,7 +35,7 @@ public static int getIntegerData(int a,int b,String sheet) throws IOException
 	XSSFRow r=s.getRow(a);
 	XSSFCell c=r.getCell(b);
 	int y= (int) c.getNumericCellValue();//type casting
-	return y;
+	return String.valueOf(y);
 	
 }
 

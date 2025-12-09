@@ -41,7 +41,7 @@ public class CreateAdminUserPage {
 	}
 	public void selectUserType()
 	{
-		PageUtilities pageutilities=new PageUtilities();
+		PageUtilities pageutilities=new PageUtilities(driver);
 		pageutilities.selectByVisibleText(usertype, "Admin");
 		
 	}
