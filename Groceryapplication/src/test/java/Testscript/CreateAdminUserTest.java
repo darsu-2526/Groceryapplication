@@ -1,36 +1,41 @@
 package Testscript;
 
 import java.io.IOException;
+import java.lang.invoke.ConstantBootstraps;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Constant.Constant;
 import Pages.CreateAdminUserPage;
+import Pages.HomePage;
 import Pages.LoginPage;
 import Utilities.ExcelUtilities;
 
 public class CreateAdminUserTest extends Base {
-	@Test
+	CreateAdminUserPage createadminuserpage;
+	HomePage homepage;
+	@Test(description="create new admin user with valid username and password")
 	public void verifyUserIsAbleToCreateNewAdminUser() throws IOException {
 		
 		String username=ExcelUtilities.getStringData(1, 0, "loginpage");
 		String password=ExcelUtilities.getStringData(1, 1, "loginpage");
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUsername(username);
-		loginpage.enterPassword(password);
-		loginpage.clicksignin();
+		loginpage=loginpage.enterTheUsername(username).enterPassword(password);
+		//loginpage.enterPassword(password);
+		homepage=loginpage.clicksignin();
 		
 		String adminusername=ExcelUtilities.getStringData(1, 0, "adminusers");
 		String adminpassword=ExcelUtilities.getStringData(1, 1, "adminusers");
-		CreateAdminUserPage createadminuserpage=new CreateAdminUserPage(driver);
-		createadminuserpage.clickMoreInfo();
-		createadminuserpage.clickNewButton();
-		createadminuserpage.enterUsername(adminusername);
-		createadminuserpage.enterPassword(adminpassword);
-		createadminuserpage.selectUserType();
-		createadminuserpage.clickSave();
+		//CreateAdminUserPage createadminuserpage=new CreateAdminUserPage(driver);
+		createadminuserpage=homepage.clickMoreInfoCreateAdminUser();
+		createadminuserpage.clickNewButton().enterUsername(adminusername).enterPassword(adminpassword).selectUserType().clickSave();
+		//createadminuserpage.enterUsername(adminusername);
+		//createadminuserpage.enterPassword(adminpassword);
+		//createadminuserpage.selectUserType();
+		//createadminuserpage.clickSave();
 		boolean alert=createadminuserpage.isAlertDisplayed();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,Constant.ADDINGNEWADMINUSER);
 		
 		
 	}

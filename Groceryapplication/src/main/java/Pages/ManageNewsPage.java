@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
-@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']")WebElement managenewsmoreinfo;
+//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']")WebElement managenewsmoreinfo;
 @FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newbutton;
 @FindBy(xpath="//textarea[@id='news']")WebElement newsfield;
 @FindBy(xpath="//button[@class='btn btn-danger']")WebElement savebutton;
@@ -19,21 +19,24 @@ public ManageNewsPage(WebDriver driver) {
 	PageFactory.initElements(driver,this);
 }
 
-public void clickMoreInfo()
+/*public void clickMoreInfoManageNews()
 {
 	managenewsmoreinfo.click();
-}
-public void clickNewButton()
+}*/
+public ManageNewsPage clickNewButton()
 {
 	newbutton.click();
+	return this;
 }
-public void enterNews(String news)
+public ManageNewsPage enterNews(String news)
 {
 	newsfield.sendKeys(news);
+	return this;
 }
-public void clickSave()
+public ManageNewsPage clickSave()
 {
 	savebutton.click();
+	return this;
 }
 public boolean isAlertDisplayed()
 {

@@ -10,7 +10,7 @@ import Utilities.FileUploadUtilities;
 import Utilities.PageUtilities;
 
 public class ManageCategoryPage {
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and @class='small-box-footer']")WebElement categorymoreinfo;
+	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and @class='small-box-footer']")WebElement categorymoreinfo;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newbutton;
 	@FindBy(xpath="//input[@id='category']")WebElement categorytextfield;;	@FindBy(xpath="//li[@id='134-selectable']")WebElement discount;
 	@FindBy(xpath="//input[@id='main_img']")WebElement choosefile;
@@ -23,32 +23,38 @@ public class ManageCategoryPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	public void clickMoreInfo()
+	/*public ManageCategoryPage clickCategoryMoreInfo()
 	{
 		categorymoreinfo.click();
-	}
-	public void clickAddNewButton()
+		return this;
+	}*/
+	public ManageCategoryPage clickAddNewButton()
 	{
 		newbutton.click();
+		return this;
 	}
-	public void selectCategoryField(String categogy)
+	public ManageCategoryPage  selectCategoryField(String categogy)
 	{
 		categorytextfield.sendKeys(categogy);
+		return this;
 	}
-	public void clickDiscount()
+	public ManageCategoryPage clickDiscount()
 	{
 		discount.click();
+		return this;
 	}
-	public void chooseImageFile()
+	public ManageCategoryPage chooseImageFile()
 	
 	{
 	    FileUploadUtilities fileuploadutilities=new FileUploadUtilities();
 	    fileuploadutilities.fileUploadUsingSendKeys(choosefile, Constant.TESTIMAGE);
+		return this;
 	}
-	public void clickSaveButton()
+	public ManageCategoryPage clickSaveButton()
 	{
 		PageUtilities pageutilities=new PageUtilities(driver);
 		pageutilities.click(driver,savebutton);
+		return this;
 		
 	}
 	public boolean isAlertDisplayed()

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtilities {
 	public static final int INPLICITWAIT=5;
 	public static final int EXPLICITWAIT=5;
+	
 	public void waitForElement(WebDriver driver, WebElement target) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.visibilityOf(target));

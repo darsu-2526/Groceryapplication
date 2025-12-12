@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import Utilities.PageUtilities;
 
 public class ManageContactPage {
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']")WebElement moreinfo;
+	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']")WebElement moreinfocontactpage;
 	@FindBy(xpath="//i[@class='fas fa-edit']")WebElement edit;
 	@FindBy(xpath="//input[@id='phone']")WebElement phonenumberfield;
 	@FindBy(xpath="//input[@id='email'and @name='email']")WebElement emailfield;
@@ -24,44 +24,52 @@ public class ManageContactPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	public void clickMoreinfo()
+	/*public ManageContactPage clickManageContactPageMoreinfo()
 	{
 		PageUtilities pageutilities=new PageUtilities(driver);
-		pageutilities.click(driver, moreinfo);
+		pageutilities.click(driver,moreinfocontactpage);
+		return new ManageContactPage(driver);
 	
-	}
-	public void clickEdit()
+	}*/
+	public ManageContactPage clickEdit()
 	{
 		edit.click();
+		return this;
 	}
-	public void updatePhonenumber(String phonenumber)
+	public ManageContactPage updatePhonenumber(String phonenumber)
 	{
 		phonenumberfield.clear();
 		phonenumberfield.sendKeys(phonenumber);
+		return this;
 	}
-	public void updateEmail(String email)
+	public ManageContactPage updateEmail(String email)
 	{
 		emailfield.clear();
 		emailfield.sendKeys(email);
+		return this;
 	}
-	public void updateAddress(String address)
+	public ManageContactPage updateAddress(String address)
 	{
 		addressfield.clear();
 		addressfield.sendKeys(address);
+		return this;
 	}
-	public void updateDeliveryTime(String deliverytime)
+	public ManageContactPage updateDeliveryTime(String deliverytime)
 	{
 		deliverytimefield.clear();
 		deliverytimefield.sendKeys(deliverytime);
+		return this;
 	}
-	public void updateDeliveryChargeLimit(String deliverychargelimit)
+	public ManageContactPage updateDeliveryChargeLimit(String deliverychargelimit)
 	{
 		deliverychargelimitfield.clear();
 		deliverychargelimitfield.sendKeys(deliverychargelimit);
+		return this;
 	}
-	public void clickUpdate()
+	public ManageContactPage clickUpdate()
 	{
 		update.click();
+		return this;
 	}
 	public boolean alertDisplayed()
 	{

@@ -5,13 +5,17 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Constant.Constant;
 import Pages.LoginPage;
 import Pages.LogoutPage;
+import Pages.HomePage;
 import Utilities.ExcelUtilities;
 
 public class LogoutTest extends Base {
-	@Test
-	public void verifyWeatherUserIsAbleToLogout() throws IOException
+	HomePage homepage;
+
+	@Test(description="logout from the system")
+	public void verifyUserIsAbleToLogout() throws IOException
 	{
 		
 		String username=ExcelUtilities.getStringData(1, 0, "loginpage");
@@ -25,6 +29,6 @@ public class LogoutTest extends Base {
 		logoutpage.selectLogout();
 		logoutpage.isSigninDisplayed();
 		boolean signin=logoutpage.isSigninDisplayed();
-		Assert.assertTrue(signin);
+		Assert.assertTrue(signin,Constant.LOGOUTFROMTHESYSTEM);
 	}
 }
