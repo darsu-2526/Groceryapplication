@@ -3,6 +3,7 @@ package Testscript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Constant.Constant;
@@ -50,11 +51,11 @@ public class LoginTest extends Base {
 			Assert.assertTrue(alert,Constant.LOGINWITHINVALIDUSERNAMEANDVALIDPASSWORD);
 		}
 		
-		@Test(description="userlogin with invalid username and invalid password")
-		public void VerifyUserLoginUsingInvalidUsernameAndInvalidPassword() throws IOException
+		@Test(description="userlogin with invalid username and invalid password",dataProvider ="LoginProvider")
+		public void VerifyUserLoginUsingInvalidUsernameAndInvalidPassword(String username,String password) throws IOException
 		{
-			String username=ExcelUtilities.getStringData(4, 0, "loginpage");
-			String password=ExcelUtilities.getStringData(4, 1, "loginpage");
+			//String username=ExcelUtilities.getStringData(4, 0, "loginpage");
+			//String password=ExcelUtilities.getStringData(4, 1, "loginpage");
 			LoginPage loginpage=new LoginPage(driver);
 			loginpage.enterTheUsername(username);
 			loginpage.enterPassword(password);
@@ -62,6 +63,13 @@ public class LoginTest extends Base {
 			boolean alert=loginpage.isAlertDisplayed();
 			Assert.assertTrue(alert,Constant.LOGINWITHINVALIDUSERNAMEANDINVALIDPASSWORD);
 			
+		}
+		@DataProvider(name="LoginProvider")
+		public Object[][] getDataFromTestData() throws IOException{
+			return new Object[][] {{ExcelUtilities.getStringData(4, 0,"loginpage"),ExcelUtilities.getStringData(4,1,"loginpage")}};
+			
+		
+		
 		}
 
 	}

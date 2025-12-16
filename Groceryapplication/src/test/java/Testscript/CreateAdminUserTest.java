@@ -11,6 +11,7 @@ import Pages.CreateAdminUserPage;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Utilities.ExcelUtilities;
+import Utilities.FakerUtilities;
 
 public class CreateAdminUserTest extends Base {
 	CreateAdminUserPage createadminuserpage;
@@ -24,9 +25,11 @@ public class CreateAdminUserTest extends Base {
 		loginpage=loginpage.enterTheUsername(username).enterPassword(password);
 		//loginpage.enterPassword(password);
 		homepage=loginpage.clicksignin();
-		
-		String adminusername=ExcelUtilities.getStringData(1, 0, "adminusers");
-		String adminpassword=ExcelUtilities.getStringData(1, 1, "adminusers");
+		FakerUtilities fakerutilities=new FakerUtilities();
+		String adminusername=fakerutilities.creatARandomFirstName();
+		String adminpassword=fakerutilities.creatARandomFirstName();
+		//String adminusername=ExcelUtilities.getStringData(1, 0, "adminusers");
+		//String adminpassword=ExcelUtilities.getStringData(1, 1, "adminusers");
 		//CreateAdminUserPage createadminuserpage=new CreateAdminUserPage(driver);
 		createadminuserpage=homepage.clickMoreInfoCreateAdminUser();
 		createadminuserpage.clickNewButton().enterUsername(adminusername).enterPassword(adminpassword).selectUserType().clickSave();
