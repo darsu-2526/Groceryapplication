@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml</span>
+                    <span>C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content skipped suite-Default_suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Testscript.LogoutTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToLogout">verifyUserIsAbleToLogout</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToLoginUsingValidCredentials">verifyUserIsAbleToLoginUsingValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Default_suite -->
@@ -121,17 +121,17 @@
           <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">Testscript.LogoutTest</span>
+              <span class="class-name">testscript.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToLogout">
-                  </a> <!-- verifyUserIsAbleToLogout -->
-                  <span class="method-name">verifyUserIsAbleToLogout</span>
+                  <a name="verifyUserIsAbleToLoginUsingValidCredentials">
+                  </a> <!-- verifyUserIsAbleToLoginUsingValidCredentials -->
+                  <span class="method-name">verifyUserIsAbleToLoginUsingValidCredentials</span>
                   <div class="stack-trace">org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -164,7 +164,7 @@ in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsu
 
 </div> <!-- stack-trace -->
                   <em>
-(logout from the system)                  </em>
+(user login with valid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +172,7 @@ in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsu
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,11 +181,11 @@ in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsu
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Testscript.LogoutTest&quot;&gt;
+      &lt;class name=&quot;testscript.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyUserIsAbleToLogout&quot;/&gt;
+          &lt;include name=&quot;verifyUserIsAbleToLoginUsingValidCredentials&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Testscript.LogoutTest --&gt;
+      &lt;/class&gt; &lt;!-- testscript.LoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -227,8 +227,8 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToLogout')
-data.setCell(0, 2, 'Testscript.LogoutTest')
+data.setCell(0, 1, 'verifyUserIsAbleToLoginUsingValidCredentials')
+data.setCell(0, 2, 'testscript.LoginTest')
 data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
@@ -249,9 +249,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testscript.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">VerifyUserLoginUsingInvalidUsernameAndInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">verifyUserLoginUsingValidUsernameAndInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">VerifyUserLoginUsingInvalidUsernameAndValidPassword</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -260,11 +271,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Testscript.LogoutTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscript.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">browserQuitAndClose([TestResult name=verifyUserIsAbleToLogout status=SKIP method=LogoutTest.verifyUserIsAbleToLogout()[p...)</span>
+                <span class="method-name">browserQuitAndClose([TestResult name=verifyUserIsAbleToLoginUsingValidCredentials status=SKIP method=LoginTest.verifyUse...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->

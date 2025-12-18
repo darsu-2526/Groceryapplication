@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-16T13:02:19 IST" name="Default suite" finished-at="2025-12-16T13:02:19 IST" duration-ms="58">
+  <suite started-at="2025-12-17T17:08:32 IST" name="Default suite" finished-at="2025-12-17T17:08:32 IST" duration-ms="78">
     <groups>
     </groups>
-    <test started-at="2025-12-16T13:02:19 IST" name="Default test" finished-at="2025-12-16T13:02:19 IST" duration-ms="58">
-      <class name="Testscript.LogoutTest">
-        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:Testscript.LogoutTest@76505305]" started-at="2025-12-16T13:02:19 IST" name="browserInitialisation" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1765870339897" status="FAIL">
+    <test started-at="2025-12-17T17:08:32 IST" name="Default test" finished-at="2025-12-17T17:08:32 IST" duration-ms="78">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="browserInitialisation(java.lang.String)[pri:0, instance:testscript.LoginTest@36fc695d]" started-at="2025-12-17T17:08:32 IST" name="browserInitialisation" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1765971512816" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml]]>
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:264)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -53,17 +53,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialisation -->
-        <test-method signature="verifyUserIsAbleToLogout()[pri:0, instance:Testscript.LogoutTest@76505305]" started-at="2025-12-16T13:02:19 IST" name="verifyUserIsAbleToLogout" description="logout from the system" finished-at="2025-12-16T13:02:19 IST" duration-ms="0" status="SKIP">
+        <test-method signature="verifyUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@36fc695d]" started-at="2025-12-17T17:08:32 IST" name="verifyUserIsAbleToLoginUsingValidCredentials" description="user login with valid credentials" finished-at="2025-12-17T17:08:32 IST" duration-ms="0" status="SKIP">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml]]>
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:264)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -98,12 +98,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogout -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:Testscript.LogoutTest@76505305]" started-at="2025-12-16T13:02:19 IST" name="browserQuitAndClose" finished-at="2025-12-16T13:02:19 IST" duration-ms="8" status="FAIL">
+        </test-method> <!-- verifyUserIsAbleToLoginUsingValidCredentials -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@36fc695d]" started-at="2025-12-17T17:08:32 IST" name="browserQuitAndClose" finished-at="2025-12-17T17:08:32 IST" duration-ms="10" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToLogout status=SKIP method=LogoutTest.verifyUserIsAbleToLogout()[pri:0, instance:Testscript.LogoutTest@76505305] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToLoginUsingValidCredentials status=SKIP method=LoginTest.verifyUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@36fc695d] output={null}]]]>
               </value>
             </param>
           </params>
@@ -113,8 +113,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "scrShot" is null
-at Utilities.ScreenshotUtilities.getScreenShot(ScreenshotUtilities.java:17)
-at Testscript.Base.browserQuitAndClose(Base.java:57)
+at utilities.ScreenshotUtilities.getScreenShot(ScreenshotUtilities.java:17)
+at testscript.Base.browserQuitAndClose(Base.java:57)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -152,7 +152,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
-      </class> <!-- Testscript.LogoutTest -->
+      </class> <!-- testscript.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

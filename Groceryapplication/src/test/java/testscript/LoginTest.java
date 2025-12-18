@@ -15,7 +15,7 @@ public class LoginTest extends Base {
 	HomePage homepage;
 	LoginPage loginpage;
 	
-		@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class,description="user login with valid credentials")
+		@Test(/*groups= {"regression"},*//*retryAnalyzer=retry.Retry.class,*/description="user login with valid credentials")
 		public void verifyUserIsAbleToLoginUsingValidCredentials() throws IOException {
 			String username=ExcelUtilities.getStringData(1, 0, "loginpage");
 			String password=ExcelUtilities.getStringData(1, 1, "loginpage");
@@ -26,6 +26,7 @@ public class LoginTest extends Base {
 			boolean homepage=loginpage.isHomePageDisplayed();
 			Assert.assertTrue(homepage,Constant.LOGINWITHVALIDCREDENTIALS);
 			}
+		
 		@Test(description="userlogin with valid username and invalid password")
 		public void verifyUserLoginUsingValidUsernameAndInvalidPassword() throws IOException {
 			String username=ExcelUtilities.getStringData(2, 0, "loginpage");

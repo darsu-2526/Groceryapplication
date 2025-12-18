@@ -24,6 +24,7 @@ public class LogoutPage {
 	public void selectLogout()
 	{
 		logout.click();
+	
 	}
 	public boolean isSigninDisplayed()
 	{

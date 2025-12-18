@@ -9,13 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">58</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">78</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">Testscript.LogoutTest</td><td><a href="#m0">browserInitialisation</a></td><td rowspan="1">1765870339897</td><td rowspan="1">-1765870339897</td></tr><tr class="failedeven"><td><a href="#m1">browserQuitAndClose</a></td><td rowspan="1">1765870339919</td><td rowspan="1">8</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">Testscript.LogoutTest</td><td><a href="#m2">verifyUserIsAbleToLogout</a></td><td rowspan="1">1765870339912</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">testscript.LoginTest</td><td><a href="#m0">browserInitialisation</a></td><td rowspan="1">1765971512816</td><td rowspan="1">-1765971512816</td></tr><tr class="failedeven"><td><a href="#m1">browserQuitAndClose</a></td><td rowspan="1">1765971512842</td><td rowspan="1">10</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testscript.LoginTest</td><td><a href="#m2">verifyUserIsAbleToLoginUsingValidCredentials</a></td><td rowspan="1">1765971512835</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Testscript.LogoutTest#browserInitialisation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+<h2>Default test</h2><h3 id="m0">testscript.LoginTest#browserInitialisation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)
@@ -46,9 +46,9 @@ in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsu
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Testscript.LogoutTest#browserQuitAndClose</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=verifyUserIsAbleToLogout status=SKIP method=LogoutTest.verifyUserIsAbleToLogout()[pri:0, instance:Testscript.LogoutTest@76505305] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;scrShot&quot; is null
-	at Utilities.ScreenshotUtilities.getScreenShot(ScreenshotUtilities.java:17)
-	at Testscript.Base.browserQuitAndClose(Base.java:57)
+<h3 id="m1">testscript.LoginTest#browserQuitAndClose</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=verifyUserIsAbleToLoginUsingValidCredentials status=SKIP method=LoginTest.verifyUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@36fc695d] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;scrShot&quot; is null
+	at utilities.ScreenshotUtilities.getScreenShot(ScreenshotUtilities.java:17)
+	at testscript.Base.browserQuitAndClose(Base.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -81,9 +81,9 @@ in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsu
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Testscript.LogoutTest#verifyUserIsAbleToLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+<h3 id="m2">testscript.LoginTest#verifyUserIsAbleToLoginUsingValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
 Parameter &apos;browser&apos; is required by BeforeMethod on method browserInitialisation but has not been marked @Optional or defined
-in C:\Users\darsana\AppData\Local\Temp\testng-eclipse-1698707662\testng-customsuite.xml
+in C:\Users\darsana\AppData\Local\Temp\testng-eclipse--449572978\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:264)
 	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:690)

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.PageUtilities;
+
 import utilities.WaitUtilities;
 
 public class ManageContactPage {
@@ -71,7 +71,7 @@ public class ManageContactPage {
 	{
 		WaitUtilities wait=new WaitUtilities();
 		wait.waitForElement(driver,update);
-		//update.click();
+		update.click();
 		return this;
 	}
 	public boolean alertDisplayed()

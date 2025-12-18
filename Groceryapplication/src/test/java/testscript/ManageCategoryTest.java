@@ -11,6 +11,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
 import utilities.ExcelUtilities;
+import utilities.FakerUtilities;
 
 public class ManageCategoryTest extends Base{
 	HomePage homepage;
@@ -28,11 +29,13 @@ public class ManageCategoryTest extends Base{
 		//loginpage.enterPassword(password);
 		homepage=loginpage.clicksignin();
 		
-		String categogy="Test boutique";
+		//String category="new boutique";
+		FakerUtilities fakerutilities=new FakerUtilities();
+		String category=fakerutilities.creatARandomFirstName();
 		//ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
 		managecategorypage=homepage.clickCategoryMoreInfo();
-		managecategorypage.clickAddNewButton().selectCategoryField(categogy).clickDiscount().chooseImageFile().clickSaveButton();
-		//managecategorypage.selectCategoryField(categogy);
+		managecategorypage.clickAddNewButton().selectCategoryField(category).clickDiscount().chooseImageFile().clickSaveButton();
+		//managecategorypage.selectCategoryField(category);
 		//managecategorypage.clickDiscount();
 		//managecategorypage.clickSaveButton();
 		boolean alert=managecategorypage.isAlertDisplayed();

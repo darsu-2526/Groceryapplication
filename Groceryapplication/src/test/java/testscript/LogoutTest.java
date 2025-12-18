@@ -13,6 +13,7 @@ import utilities.ExcelUtilities;
 
 public class LogoutTest extends Base {
 	HomePage homepage;
+	LogoutPage logoutpage;
 
 	@Test(description="logout from the system")
 	public void verifyUserIsAbleToLogout() throws IOException
@@ -24,6 +25,7 @@ public class LogoutTest extends Base {
 		loginpage.enterTheUsername(username);
 		loginpage.enterPassword(password);
 		loginpage.clicksignin();
+		
 		LogoutPage logoutpage=new LogoutPage(driver);
 		logoutpage.clickAdmin();
 		logoutpage.selectLogout();

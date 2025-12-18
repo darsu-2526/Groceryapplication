@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-       <class name="Testscript.ManageContactTest"/>
-      <!-- <class name="Testscript.ManageNewsTest"/>-->
-      <!--<class name="Testscript.ManageCategoryTest"/>-->
-      <!-- <class name="Testscript.CreateAdminUserTest"/>-->
-      <!-- <class name="Testscript.ManageFooterTest"/>-->
-      <!--  <class name="Testscript.LoginTest"/>-->
-      <!-- <class name="Testscript.LogoutTest"/>-->
+       <!-- <class name="testscript.ManageContactTest"/>-->
+       <!-- <class name="testscript.ManageNewsTest"/>-->
+      <!-- <class name="testscript.ManageCategoryTest"/>-->
+      <!-- <class name="testscript.CreateAdminUserTest"/>-->
+        <!-- <class name="testscript.ManageFooterTest"/>-->
+      <class name="testscript.LoginTest"/>
+      <!-- <class name="testscript.LogoutTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
